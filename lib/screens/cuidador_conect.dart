@@ -65,7 +65,7 @@ Widget build(BuildContext context) {
                     Align(
                         alignment: Alignment.topCenter,
                         child: Text(
-                        'Gostaria de Conectar-se ao seu Cuidador???',
+                        'Gostaria de Conectar-se agora ao perfil do seu Idoso???',
                         style: TextStyle(
                           color: const Color.fromARGB(255, 0, 0, 0),
                           fontFamily: 'Helvetica', // Define a fonte personalizada
@@ -81,7 +81,7 @@ Widget build(BuildContext context) {
                                           onPressed: null,
                                           style: ElevatedButton.styleFrom(
                                             padding: EdgeInsets.symmetric(vertical: 10.0),
-                                            backgroundColor: const Color.fromARGB(255, 2, 122, 14), // Cor do botão
+                                            backgroundColor: const Color.fromARGB(255, 11, 146, 24), // Cor do botão
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(12.0),
                                             ),
@@ -99,7 +99,7 @@ Widget build(BuildContext context) {
                                           onPressed: null,
                                           style: ElevatedButton.styleFrom(
                                             padding: EdgeInsets.symmetric(vertical: 10.0),
-                                            backgroundColor: const Color.fromARGB(255, 2, 122, 14), // Cor do botão
+                                            backgroundColor: const Color.fromARGB(255, 9, 148, 23), // Cor do botão
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(12.0),
                                             ),

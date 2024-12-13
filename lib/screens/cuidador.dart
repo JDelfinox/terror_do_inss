@@ -1,4 +1,4 @@
-import 'idos_cuid_conect.dart';
+import 'cuidador_conect.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,34 +9,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CadastroIdosoCuidScreen(),
+      home: CuidadorScreen(),
       );
   }
 }
-class CadastroIdosoCuidScreen extends StatefulWidget {
+class CuidadorScreen extends StatefulWidget {
   @override
-  _CadastroIdosoCuidScreenState createState() => _CadastroIdosoCuidScreenState();
+  _CuidadorScreenState createState() => _CuidadorScreenState();
 }
 
-class _CadastroIdosoCuidScreenState extends State<CadastroIdosoCuidScreen> {
+class _CuidadorScreenState extends State<CuidadorScreen> {
   final List<Map<String, dynamic>> question = [
     {
-        'question': 'Você possui alguma condição que afeta a sua visão? Se sim, qual?',
-        'options': ['Não Possuo', 'Catarata', 'Astigmatismo', 'Miopia', 'Outra condição'],
-        'answers': [true, false, false, false, false],
+        'question': 'Você possui alguma formação ou experiência em cuidados com Idosos?',
+        'options': ['Não Possuo', 'Sim, Possuo conhecimento básico', 'Sim, Possuo conhecimento intermediário', 'Sim, Possuo conhecimento avançado'],
+        'answers': [true, false, false, false],
     },
-    {
-      'question': 'Você possui alguma condição que afeta a sua audição?',
-      'options': ['Não Possuo', 'Sim, perda auditiva leve', 'Sim, perda auditiva moderada', 'Sim, perda auditiva severa', 'Sim, surdez total', 'Sim, uso aparelhos auditivos', 'Sim, uso implante coclear'],
-      'answers': [true, false, false, false, false, false, false]
-    },
-    {
-      'question': 'Você possui alguma condição crônica ou de saúde que afeta suas atividades diarias?',
-      'options': ['Não Possuo', 'Diabetes', 'Hipertensão arterial', 'Insuficiência cardíaca', 'Doença de Parkinson', 'Osteoporose', 'Outra(s) Condição(ões)'],
-      'answers': [true, false, false, false, false, false, false],
-    }
   ];
-
   int _currentQuestionIndex = 0;
   void _proxPergunta() {
     if (_currentQuestionIndex < question.length - 1) {
@@ -124,29 +113,12 @@ class _CadastroIdosoCuidScreenState extends State<CadastroIdosoCuidScreen> {
                         }).toList(),
                         SizedBox(
                           width: double.infinity,
-                          child: 
-                        ElevatedButton(
-                          onPressed:_antPergunta,
-                          style: ElevatedButton.styleFrom(
-                            padding: EdgeInsets.symmetric(vertical: 10),
-                            backgroundColor: const Color.fromARGB(255, 2, 122, 14),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                          ),
-                          child: Text('Anterior',
-                          style: TextStyle(fontSize: 18, color: Colors.white),),
-                          ),
-                        ),
-                        SizedBox(height: 10),
-                        SizedBox(
-                          width: double.infinity,
-                          child: 
-                        ElevatedButton(
+                          child:
+                              ElevatedButton(
                           onPressed:(){
                             Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => ConectScrenn()),
-                          );
+                            MaterialPageRoute(builder: (context) => ConectScrenn(),)
+                            );
                           },
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(vertical: 10),
@@ -158,15 +130,17 @@ class _CadastroIdosoCuidScreenState extends State<CadastroIdosoCuidScreen> {
                           child: Text('Próximo',
                           style: TextStyle(fontSize: 18, color: Colors.white),),
                         ),
-                        )
+                        ),
                         
-        ])
-          )
-      )
-      )
-      )
-      ],
-      ),
-    );
-   }
-}
+                       
+                      ]
+                    )
+                  )
+                )
+              )
+            )
+          ]
+        )
+      );
+    }
+  }

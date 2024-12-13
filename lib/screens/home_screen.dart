@@ -195,8 +195,9 @@ class LoginScreen extends StatelessWidget {
                           Text('Não tem conta? ', style: TextStyle(color: Colors.grey)),
                           GestureDetector(
                             onTap: () {
-                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Navegar para Registro'),)
-                              );
+                              Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => CadastroNomeScreen(),)
+                            );
                             },
                             child: Text(
                               'Registre-se Aqui',

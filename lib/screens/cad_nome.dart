@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'cuidador.dart';
+import 'idos_caid.dart';
 
 void main() {
   runApp(MyApp());
@@ -368,7 +370,11 @@ class _CadastroNomeScreenState extends State<CadastroNomeScreen> {
               SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: _proximaEtapa,
+                          onPressed:(){
+                            Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => CadastroIdosoCuidScreen()),
+                          );
+                          },        
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(vertical: 10.0),
                             backgroundColor: const Color.fromARGB(255, 2, 122, 14), // Cor do botão
@@ -386,7 +392,11 @@ class _CadastroNomeScreenState extends State<CadastroNomeScreen> {
                   SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: _proximaEtapa,
+                          onPressed:(){
+                            Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => CadastroIdosoCuidScreen()),
+                          );
+                          },
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(vertical: 10.0),
                             backgroundColor: const Color.fromARGB(255, 2, 122, 14), // Cor do botão
@@ -404,7 +414,11 @@ class _CadastroNomeScreenState extends State<CadastroNomeScreen> {
                   SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: _proximaEtapa,
+                          onPressed:(){
+                            Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => CuidadorScreen()),
+                          );
+                          },
                           style: ElevatedButton.styleFrom(
                             padding: EdgeInsets.symmetric(vertical: 10.0),
                             backgroundColor: const Color.fromARGB(255, 2, 122, 14), // Cor do botão
