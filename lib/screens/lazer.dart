@@ -16,78 +16,38 @@ class MyApp extends StatelessWidget {
 
 class OptionsScreen extends StatelessWidget {
   final List<OptionItem> options =[
-    OptionItem('Calendário','lib/assets/images/calendario.png'),
-    OptionItem('Meu Paciente','lib/assets/images/paciente.png'),
-    OptionItem('Comunidade','lib/assets/images/comunidade.png'),
-    OptionItem('Lazer','lib/assets/images/lazer.png'),
-    OptionItem('Dicas','lib/assets/images/dicas.png'),
-    OptionItem('Direito dos Idosos','lib/assets/images/direitos.png'),
-    OptionItem('Autocuidado','lib/assets/images/autocuidado.png'),
-    OptionItem('Compras','lib/assets/images/compras.png'),
-    OptionItem('Lembretes','lib/assets/images/lembretes.png'),
-    OptionItem('Personalize seus Lembretes','lib/assets/images/personalizar.png'),
-    OptionItem('Vagas para Cuidador','lib/assets/images/vagas.png'),
-    OptionItem('Consulta Médica Online','lib/assets/images/consulta.png'),
+    OptionItem('Música','lib/assets/images/musica.png'),
+    OptionItem('Exercício de Relaxamento','lib/assets/images/exercicio.png'),
+    OptionItem('Aulas e Tutoriais','lib/assets/images/aula.png'),
+    OptionItem('Jogos','lib/assets/images/jogos.png'),
+    OptionItem('Eventos e Atividades Locais','lib/assets/images/evento.png'),
+
   ];
 
-  @override
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Padding(
-            padding:const EdgeInsets.all(16.0),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  radius: 30,
-                  backgroundImage: AssetImage('lib/assets/images/usuario.png'),
-                ),
-                SizedBox(width: 10),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Olá, Usuário',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,)
-                      ),
-                      Text(
-                        'Bem-Vindo!',
-                        style: TextStyle(fontSize: 16, color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    print('Botão de Emergência Pressionado');
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red
-                  ),
-                  child: Text(
-                    'Emergência',
-                    style: TextStyle(fontSize: 16, color: Colors.white),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Pesquise aqui...',
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
+      appBar: AppBar(
+        leading: IconButton(
+           icon: Row(
+            children: [
+              Icon(Icons.arrow_back_ios, color: Colors.white),
+              SizedBox(width: 4),
+              Text('Voltar', style: TextStyle(color: Colors.white, fontSize: 16)
               ),
-              onChanged: (value) {
-                print( 'Texto digitado: $value');
-              },
-            ),
-          ),
+            ],
+           ),
+           onPressed: () {
+             Navigator.pop(context);
+           },
+        ),
+        title: Text('Lazer',
+        style: TextStyle(color: Colors.white, fontSize: 25),),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(221, 20, 181, 202),
+      ), 
+      body: Column(
+        children: [   
           SizedBox(height: 10),
           Expanded(
             child: Padding(padding: const EdgeInsets.all(8.0),
